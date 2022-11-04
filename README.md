@@ -60,9 +60,15 @@ sudo tail -F /var/log/nginx/error.log
 #
 ```
 
-## Refreshing when you change gunicorn.service file:
+## Refreshing your services after Changes:
 
+When you change gunicorn.service file:
 ```
 sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
+```
+
+To restart nginx:
+```
+sudo systemctl restart nginx
 ```
