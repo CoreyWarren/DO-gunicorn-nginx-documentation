@@ -1,6 +1,33 @@
 # DO-gunicorn-nginx-documentation
 DigitalOcean - Gunicorn and NginX Tutorial
 
+# Word to the wise:
+
+Seems like folder permissions and ownership are INCREDIBLY IMPORTANT to getting nginx and gunicorn to host the website. 
+
+SO. Here are the problems I ran into when trying to set up nginx and gunicorn overall:
+
+## 1 - STUPID TYPOS
+Seriously, check for stupid typos first. Sometimes you may forget to replace the 'myproject' with your real project name, or you may have created a file ```/home/coco.conf.conf ```when you meant to create ```/home/coco/conf.conf```.
+
+## 2 - PERMISSIONS PART 1 - OWNERSHIP
+This mostly applies to DATABASE bugs. But if you're experiencing nginx bugs with what you think is maybe 'ownership, try...:
+
+## 3 - PERMISSIONS PART 2 - USER, GROUP, WORLD/OTHER
+Make sure that nginx is able to access your .sock file by checking with
+```
+namei -nom /home/my_user/my_project/my_project.sock
+```
+The above will display the ownership, and more importantly, RIGHTS to all folders leading up to your sock file. Yes, these all count.
+
+The solution to my problem? For some reason, my 'user' folder had 'other' permissions set to 'r--', which means yes read, no write, no execute.
+
+I need it to be 'r-x' all the way up to my .sock file, which means I needed to use this command on my 'coco' user directory/folder:
+```
+sudo chmod o=r+x coco
+namei -nom /home/coco 
+```
+
 ## Relevant Tutorials:
 
 ### Primary nginx/gunicorn tutorial (has postgres stuff, but can be skipped around):
