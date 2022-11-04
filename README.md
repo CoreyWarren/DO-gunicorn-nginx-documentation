@@ -22,6 +22,9 @@ chown root:staff /u
 chown -hR root /u
 #Change the owner of /u and subfiles to "root".
 
+sudo chown $USER:$USER -R this_subdirectory
+#Change the ownership of this_subdirectory
+
 ```
 
 
