@@ -6,6 +6,9 @@ DigitalOcean - Gunicorn and NginX Tutorial
 ### Primary nginx/gunicorn tutorial (has postgres stuff, but can be skipped around):
 https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04
 
+### Firewalls (UFW):
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04
+
 ### chown (changing ownership in Ubuntu/Debian):
 https://linux.die.net/man/1/chown
 
