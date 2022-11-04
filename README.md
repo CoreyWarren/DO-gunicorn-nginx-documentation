@@ -3,10 +3,15 @@ DigitalOcean - Gunicorn and NginX Tutorial
 
 ## Relevant Tutorials:
 
-```
-# Primary nginx/gunicorn tutorial (has postgres stuff, but can be skipped around):
+### Primary nginx/gunicorn tutorial (has postgres stuff, but can be skipped around):
 https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04
-```
+
+
+## Troubleshooting Links:
+
+### Nginx - 502 Bad Gateway Error:
+https://www.digitalocean.com/community/questions/502-bad-gateway-nginx-2
+
 
 ## Important Files/Directories:
 
