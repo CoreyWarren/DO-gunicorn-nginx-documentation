@@ -14,7 +14,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postg
 # gunicorn setup file:
 /etc/systemd/system/gunicorn.service
 
-#
+# nginx setup for your project:
+/etc/nginx/sites-available/myproject
 
 #
 
