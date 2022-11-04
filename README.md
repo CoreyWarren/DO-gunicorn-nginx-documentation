@@ -33,6 +33,8 @@ sudo chown $USER:$USER -R this_subdirectory
 ### Nginx - 502 Bad Gateway Error:
 https://www.digitalocean.com/community/questions/502-bad-gateway-nginx-2
 
+### Linux Server Trouble Tips:
+https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-site-issues-on-a-linux-server
 
 ## Important Files/Directories:
 
