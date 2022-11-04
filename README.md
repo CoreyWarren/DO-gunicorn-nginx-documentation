@@ -33,6 +33,9 @@ sudo chown $USER:$USER -R this_subdirectory
 
 ```
 
+### File PERMISSIONS (chmod):
+https://www.guru99.com/file-permissions.html
+
 
 ## Troubleshooting Links:
 
