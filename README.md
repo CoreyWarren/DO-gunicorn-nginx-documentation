@@ -28,7 +28,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postg
 # Check status of gunicorn:
 sudo systemctl status gunicorn
 
-#
+# check nginx status:
+sudo nginx -t
 
 #
 
