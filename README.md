@@ -47,17 +47,23 @@ https://www.digitalocean.com/community/questions/502-bad-gateway-nginx-2
 
 ## Checking statuses of important services:
 
+
+Check status of gunicorn:
 ```
-# Check status of gunicorn:
 sudo systemctl status gunicorn
+sudo journalctl -u gunicorn
+```
 
-# check nginx status:
+Check nginx status:
+```
 sudo nginx -t
-
-# check nginx specific errors:
+sudo journalctl -u nginx
 sudo tail -F /var/log/nginx/error.log
+```
 
-#
+
+# Refreshing:
+
 ```
 
 ## Refreshing your services after Changes:
