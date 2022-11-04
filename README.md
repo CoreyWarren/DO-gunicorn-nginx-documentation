@@ -9,6 +9,9 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postg
 ### Firewalls (UFW):
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04
 
+### Solo NGINX Tutorial:
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
 ### chown (changing ownership in Ubuntu/Debian):
 https://linux.die.net/man/1/chown
 
