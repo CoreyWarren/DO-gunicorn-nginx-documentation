@@ -53,16 +53,29 @@ https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-site
 ## Checking statuses of important services:
 
 
-Check status of gunicorn:
+### Check status of gunicorn:
 ```
 sudo systemctl status gunicorn
 sudo journalctl -u gunicorn
 ```
 
-Check nginx status:
+### Check nginx status:
 ```
 sudo nginx -t
+```
+
+nginx access logs:
+```
+sudo less /var/log/nginx/access.log
+```
+
+nginx process logs:
+```
 sudo journalctl -u nginx
+```
+
+nginx error logs:
+```
 sudo tail -F /var/log/nginx/error.log
 ```
 
