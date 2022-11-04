@@ -31,7 +31,8 @@ sudo systemctl status gunicorn
 # check nginx status:
 sudo nginx -t
 
-#
+# check nginx specific errors:
+sudo tail -F /var/log/nginx/error.log
 
 #
 ```
