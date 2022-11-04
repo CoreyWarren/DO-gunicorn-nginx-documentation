@@ -79,6 +79,12 @@ nginx error logs:
 sudo tail -F /var/log/nginx/error.log
 ```
 
+### ufw
+
+```
+sudo ufw status
+```
+
 
 # Refreshing:
 
