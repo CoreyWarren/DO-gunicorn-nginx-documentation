@@ -53,6 +53,13 @@ https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-site
 #
 ```
 
+# Editing Important Files:
+
+Editing the nginx config:
+```
+sudo nano /etc/nginx/nginx.conf
+```
+
 ## Checking statuses of important services:
 
 
