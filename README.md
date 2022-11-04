@@ -14,6 +14,18 @@ DigitalOcean - Gunicorn and NginX Tutorial
 #
 ```
 
+## Checking statuses of important services:
+
+```
+# Check status of gunicorn:
+sudo systemctl status gunicorn
+
+#
+
+#
+
+#
+```
 
 ## Changing ownership of a folder/file:
 
