@@ -1,7 +1,7 @@
 # DO-gunicorn-nginx-documentation
 DigitalOcean - Gunicorn and NginX Tutorial
 
-# Word to the wise:
+# Word to the wise (502 ERROR):
 
 Seems like folder permissions and ownership are INCREDIBLY IMPORTANT to getting nginx and gunicorn to host the website. 
 
@@ -65,9 +65,6 @@ https://www.guru99.com/file-permissions.html
 
 
 ## Troubleshooting Links:
-
-### Nginx - 502 Bad Gateway Error:
-https://www.digitalocean.com/community/questions/502-bad-gateway-nginx-2
 
 ### Linux Server Trouble Tips:
 https://www.digitalocean.com/community/tutorials/how-to-troubleshoot-common-site-issues-on-a-linux-server
