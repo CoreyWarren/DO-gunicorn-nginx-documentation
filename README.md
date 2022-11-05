@@ -149,3 +149,9 @@ https://snapcraft.io/docs/installing-snapd
 
 https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 
+# File too Large (413 Request Entity Too Large):
+
+https://stackoverflow.com/questions/66929579/django-nginx-413-request-entity-too-large
+
+
+
