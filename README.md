@@ -141,3 +141,11 @@ To restart nginx:
 ```
 sudo systemctl restart nginx
 ```
+
+
+# Aftermath - Finalizing server with HTTPS (Certbot, Snap):
+
+https://snapcraft.io/docs/installing-snapd
+
+https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+
