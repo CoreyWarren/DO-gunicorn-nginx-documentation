@@ -11,6 +11,7 @@ SO. Here are the problems I ran into when trying to set up nginx and gunicorn ov
 Seriously, check for stupid typos first. Sometimes you may forget to replace the 'myproject' with your real project name, or you may have created a file ```/home/coco.conf.conf ```when you meant to create ```/home/coco/conf.conf```.
 
 ## 2 - PERMISSIONS PART 1 - OWNERSHIP
+Refer to the 'chown' section somewhere below regarding changing ownership of folders and files.
 This mostly applies to DATABASE bugs. But if you're experiencing nginx bugs with what you think is maybe 'ownership, try...:
 
 ## 3 - PERMISSIONS PART 2 - USER, GROUP, WORLD/OTHER
