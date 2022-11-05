@@ -153,5 +153,7 @@ https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
 
 https://stackoverflow.com/questions/66929579/django-nginx-413-request-entity-too-large
 
-
-
+```
+sudo nano /etc/nginx/nginx.conf
+client_max_body_size 200M;
+```
