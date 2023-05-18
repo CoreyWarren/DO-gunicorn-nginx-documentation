@@ -119,7 +119,7 @@ The solution to my problem? For some reason, my 'user' folder had 'other' permis
 
 I need it to be 'r-x' all the way up to my .sock file, which means I needed to use this command on my 'coco' user directory/folder:
 ```
-sudo chmod o=r+x coco
+sudo chmod o=r+x /home/coco
 namei -nom /home/coco 
 ```
 
