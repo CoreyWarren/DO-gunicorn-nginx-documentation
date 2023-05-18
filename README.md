@@ -72,21 +72,23 @@ Here's a legend to help you figure out what each field should be in ``` /etc/sys
 - **my_project.wsgi** -> From my understanding, there's no need to add any prefixes or parent directories to this, just keep it as ``` my_project.wsgi ``` (with your actual project name ofc), but everything around it will need to be properly directed to for this to be recognized.
 
 
+### In the end, you may end up with something LIKE this, but not exactly like this. Use the above tips to get it right:
+
+```
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=coco
+Group=www-data
+WorkingDirectory=/home/coco/coldcmerch.com/django/coldcmerch
+ExecStart=/home/coco/coldcmerch.com/django/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/coco/coldcmerch.com/django/coldcmerch/coldcmerch.sock coldcmerch.wsgi:application
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Install]
+WantedBy=multi-user.target****
+```
 
 
 
