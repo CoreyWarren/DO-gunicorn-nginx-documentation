@@ -61,6 +61,17 @@ https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
 
 Note that DNS changes can take some time to propagate, so it may take a while for the changes to take effect globally.
 
+## 3.2 - Gunicorn sucks
+
+Here's a legend to help you figure out what each field should be in ``` /etc/systemd/system/gunicorn.service ```:
+
+- **WorkingDirectory** -> Where your django APP is located (the whole app, not the subfolder within the app that shares its name, nor the parent folder holding the Django app which has some arbitrary name like 'django_stuff')
+
+- **my_project.sock** -> Goes in the exact same folder as above, which is your django APP folder. Not its subfolders.
+
+- **my_project.wsgi** -> From my understanding, there's no need to add any prefixes or parent directories to this, just keep it as ``` my_project.wsgi ``` (with your actual project name ofc), but everything around it will need to be properly directed to for this to be recognized.
+
+
 
 
 
