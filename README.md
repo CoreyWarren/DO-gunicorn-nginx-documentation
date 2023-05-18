@@ -13,24 +13,28 @@ To configure your DigitalOcean server to have SSH and DNS point to its www addre
 
 ### 1.1.1 - DNS Configuration:
 
-Log in to your DNS registrar or hosting provider where you manage the DNS records for coldcmerch.com.
-Create an "A" record or edit the existing one for the "www" subdomain.
-Set the IP address of your DigitalOcean server as the destination for the "www" subdomain.
+- Log in to your DNS registrar or hosting provider where you manage the DNS records for coldcmerch.com.
+- Create an "A" record or edit the existing one for the "www" subdomain.
+- Set the IP address of your DigitalOcean server as the destination for the "www" subdomain.
 
 #
 
 ### 1.1.2 - Server Configuration:
 
-Connect to your DigitalOcean server via SSH using its IP address.
-Update the server's host file to associate the hostname with the loopback IP address.
-Open the hosts file with the command: sudo nano /etc/hosts
-Add an entry at the end of the file like this: 127.0.0.1 coldcmerch.com www.coldcmerch.com
-Save the changes and exit the editor.
-Update the server's hostname:
-Execute the command: sudo hostnamectl set-hostname coldcmerch.com
-This will set the server's hostname to "coldcmerch.com".
-Restart the server networking for the changes to take effect:
-Run the command: sudo systemctl restart networking
+- Connect to your DigitalOcean server via SSH using its IP address.
+- Update the server's host file to associate the hostname with the loopback IP address.
+- Open the hosts file with the command: 
+``` sudo nano /etc/hosts ```
+- Add an entry at the end of the file like this: 
+``` 127.0.0.1 coldcmerch.com www.coldcmerch.com```
+- Save the changes and exit the editor.
+- Update the server's hostname:
+- - Execute the command: 
+```sudo hostnamectl set-hostname coldcmerch.com```
+- This will set the server's hostname to "coldcmerch.com".
+- Restart the server networking for the changes to take effect:
+- Run the command: 
+``` sudo systemctl restart systemd-networkd ```
 
 #
 
