@@ -34,7 +34,7 @@ To configure your DigitalOcean server to have SSH and DNS point to its www addre
 - This will set the server's hostname to "coldcmerch.com".
 - Restart the server networking for the changes to take effect:
 - Run the command: 
-``` sudo systemctl restart systemd-networkd ```
+``` sudo systemctl restart systemd-networkd ``` (Works for Ubuntu 23, will be different for older versions of Ubuntu/Linux)
 
 #
 
