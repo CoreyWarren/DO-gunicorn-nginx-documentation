@@ -40,14 +40,14 @@ To configure your DigitalOcean server to have SSH and DNS point to its www addre
 
 ### 1.1.3 - SSH Configuration:
 
-Open the SSH configuration file using the command: sudo nano /etc/ssh/sshd_config
-Locate the line that starts with #ListenAddress.
-Uncomment it by removing the '#' at the beginning of the line.
-Update the line to listen on the IP address of your DigitalOcean server.
-Save the changes and exit the editor.
-Restart the SSH service for the changes to take effect:
-Execute the command: sudo systemctl restart sshd
-Once these steps are completed, your DigitalOcean server's SSH and DNS should point to its www address, allowing you to SSH into the server using "coldcmerch.com" or "www.coldcmerch.com" instead of the IP address.
+- Open the SSH configuration file using the command: sudo nano /etc/ssh/sshd_config
+- Locate the line that starts with #ListenAddress.
+- Uncomment it by removing the '#' at the beginning of the line.
+- Update the line to listen on the IP address of your DigitalOcean server.
+- Save the changes and exit the editor.
+- Restart the SSH service for the changes to take effect:
+- Execute the command: sudo systemctl restart sshd
+- Once these steps are completed, your DigitalOcean server's SSH and DNS should point to its www address, allowing you to SSH into the server using "coldcmerch.com" or "www.coldcmerch.com" instead of the IP address.
 
 Note that DNS changes can take some time to propagate, so it may take a while for the changes to take effect globally.
 
