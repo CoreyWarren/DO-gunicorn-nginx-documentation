@@ -1,6 +1,73 @@
 # DO-gunicorn-nginx-documentation
 DigitalOcean - Gunicorn and NginX Tutorial
 
+# Tutorial
+
+#
+
+## 1.1: Setting up your domain name and such:
+
+To configure your DigitalOcean server to have SSH and DNS point to its www address, such as coldcmerch.com, you need to follow these general steps:
+
+#
+
+### 1.1.1 - DNS Configuration:
+
+Log in to your DNS registrar or hosting provider where you manage the DNS records for coldcmerch.com.
+Create an "A" record or edit the existing one for the "www" subdomain.
+Set the IP address of your DigitalOcean server as the destination for the "www" subdomain.
+
+#
+
+### 1.1.2 - Server Configuration:
+
+Connect to your DigitalOcean server via SSH using its IP address.
+Update the server's host file to associate the hostname with the loopback IP address.
+Open the hosts file with the command: sudo nano /etc/hosts
+Add an entry at the end of the file like this: 127.0.0.1 coldcmerch.com www.coldcmerch.com
+Save the changes and exit the editor.
+Update the server's hostname:
+Execute the command: sudo hostnamectl set-hostname coldcmerch.com
+This will set the server's hostname to "coldcmerch.com".
+Restart the server networking for the changes to take effect:
+Run the command: sudo systemctl restart networking
+
+#
+
+### 1.1.3 - SSH Configuration:
+
+Open the SSH configuration file using the command: sudo nano /etc/ssh/sshd_config
+Locate the line that starts with #ListenAddress.
+Uncomment it by removing the '#' at the beginning of the line.
+Update the line to listen on the IP address of your DigitalOcean server.
+Save the changes and exit the editor.
+Restart the SSH service for the changes to take effect:
+Execute the command: sudo systemctl restart sshd
+Once these steps are completed, your DigitalOcean server's SSH and DNS should point to its www address, allowing you to SSH into the server using "coldcmerch.com" or "www.coldcmerch.com" instead of the IP address.
+
+Note that DNS changes can take some time to propagate, so it may take a while for the changes to take effect globally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Word to the wise (502 ERROR):
 
 Seems like folder permissions and ownership are INCREDIBLY IMPORTANT to getting nginx and gunicorn to host the website. 
