@@ -49,6 +49,16 @@ To configure your DigitalOcean server to have SSH and DNS point to its www addre
 - - Execute the command: ```sudo /etc/init.d/ssh restart```
 - Once these steps are completed, your DigitalOcean server's SSH and DNS should point to its www address, allowing you to SSH into the server using "coldcmerch.com" or "www.coldcmerch.com" instead of the IP address.
 
+#
+
+## 2.1 - nginx
+
+# 
+
+## 3.1 - Gunicorn
+
+https://stackoverflow.com/questions/39460892/gunicorn-no-module-named-myproject
+
 Note that DNS changes can take some time to propagate, so it may take a while for the changes to take effect globally.
 
 
