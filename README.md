@@ -90,6 +90,39 @@ ExecStart=/home/coco/coldcmerch.com/django/env/bin/gunicorn --access-logfile - -
 WantedBy=multi-user.target****
 ```
 
+## 4.1 - Deploying Express:
+
+In a production environment, you typically want your Node.js applications (like your Express server) to run in the background, start automatically when the server boots up, and restart automatically if they crash. There are several ways to do this, but one of the most common methods is to use a process manager like PM2.
+
+PM2 is a production process manager for Node.js applications with a built-in load balancer. It keeps your applications alive forever, reloads them without downtime, helps you to manage application logging, and more.
+
+1. First, install PM2 globally on your server with npm:
+    ```bash
+    sudo npm install -g pm2
+    ```
+
+2. Navigate to the folder containing your Express server and start it with PM2:
+    ```bash
+    cd /path/to/your/express/server
+    pm2 start index.js --name "my-express-app"
+    ```
+    Replace `index.js` with the entry point to your Express application, and replace `"my-express-app"` with a name of your choosing.
+
+3. PM2 will now keep your Express server running in the background. You can check the status of your applications with:
+    ```bash
+    pm2 list
+    ```
+    And view their logs with:
+    ```bash
+    pm2 logs
+    ```
+
+4. To ensure that your Express server (and any other applications managed by PM2) start automatically on boot, you can use the `pm2 startup` command, which will provide instructions based on your system.
+    ```bash
+    pm2 startup
+    ```
+
+Remember, your Express server should be running on its own port (like 5000), and your Nginx configuration should include a reverse proxy to that port for the appropriate routes.
 
 
 
