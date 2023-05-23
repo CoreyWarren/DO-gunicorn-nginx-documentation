@@ -289,6 +289,7 @@ client_max_body_size 200M;
 Restarting Nginx, Gunicorn, and Express. (React needs no restart, it is static and served by Express)
 ```
 sudo systemctl reload nginx
+sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 pm2 reload my-express-server
 ```
