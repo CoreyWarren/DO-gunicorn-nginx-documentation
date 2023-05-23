@@ -282,3 +282,13 @@ https://stackoverflow.com/questions/66929579/django-nginx-413-request-entity-too
 sudo nano /etc/nginx/nginx.conf
 client_max_body_size 200M;
 ```
+
+
+# From the Future: Deployment restart help
+
+Restarting Nginx, Gunicorn, and Express. (React needs no restart, it is static and served by Express)
+```
+sudo systemctl reload nginx
+sudo systemctl restart gunicorn
+pm2 reload my-express-server
+```
