@@ -294,7 +294,7 @@ pm2 reload my-express-server
 ```
 
 
-## Launching a Production Server Using JWT Tokens with Cookies
+# Launching a Production Server Using JWT Tokens with Cookies
 
 Storing JWT tokens in cookies can add an extra layer of security to your application. However, configuring this properly can be a bit complex. Here is a guide to help you configure your Django and React application to use HttpOnly cookies for storing JWT tokens.
 
